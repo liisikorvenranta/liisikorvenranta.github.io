@@ -120,15 +120,17 @@ body {
 
 	background-color: #848484;
 	text-align: center;
-	height: 40px;
 	width: 100%;
 	font-family: 'Raleway', sans-serif;
 	font-size: 18px;
+	
 }
 
 #footertext {
 	padding-top: 8px;
+	padding-bottom: 8px;
 	margin-top: 0px;
+	margin-bottom: 0px;
 }
 
 .resize {
