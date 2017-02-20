@@ -23,8 +23,8 @@
 .navigation a {
 
 	text-decoration: none;
-	color: black;
-	font-family: 'Open Sans', sans-serif;
+	color: #848484;
+	font-family: 'Raleway', sans-serif;
 	font-size: 22px;
 	
 }
@@ -40,7 +40,7 @@
 }
 
 .navigation a:hover {
-	color: #f2f2f2;
+	color: #f4f4f4;
 }
 
 .blogpost {
@@ -49,8 +49,9 @@
 	margin-top: 10px;
 	text-align: justify;
 	padding: 10px;
-	font-family: 'Open Sans', sans-serif;
+	font-family: 'Raleway', sans-serif;
 	font-size: 16px; 
+	color: #848484
 	
 }
 
@@ -67,7 +68,7 @@
 	text-align: center;
 	height: 40px;
 	width: 100%;
-	font-family: 'Open Sans', sans-serif;
+	font-family: 'Raleway', sans-serif;
 	font-size: 18px;
 }
 
@@ -141,7 +142,8 @@ body {
 	padding-left: 40px;
 }
 
-a.nav-active {
-    color:#ccc;
+#logo {
+	height: 40px;
+	width: 60px;
+	padding-left: 40px;
 }
-
