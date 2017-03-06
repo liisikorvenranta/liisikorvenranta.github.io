@@ -151,7 +151,7 @@ body {
  
 #uutisikkuna {
     text-align: center;
-    height: 300px;
+    height: 200px;
 }
 
 #controlPanel {
@@ -161,4 +161,42 @@ body {
 #otsikko {
     font-size: 20px;
     margin-bottom: 10px;
+}
+
+#pvm {
+    margin-bottom: 10px;
+}
+
+#controlPanel {
+    margin-top: 10px;
+}
+
+#prev {
+    border: none;
+    background-color: transparent;
+}
+
+#pauseplay {
+    border: none;
+    background-color: transparent;
+}
+
+#next {
+    border: none;
+    background-color: transparent;
+}
+
+#prev:hover {
+
+	color: #f4f4f4;
+}
+
+#pauseplay:hover {
+
+	color: #f4f4f4;
+}
+
+#next:hover {
+
+	color: #f4f4f4;
 }
