@@ -1,14 +1,14 @@
 var text = null;
 var x = null;
 var playOn = true;
-var index = 0;
+var current = 0;
 
 window.onload = function () {
 
 if (localStorage.getItem("index") === String(NaN)) {
-    var current = 0;
+    current = 0;
 } else {
-    var current = parseInt(localStorage.getItem("index"));
+    current = parseInt(localStorage.getItem("index"));
 }
 
   
@@ -19,7 +19,7 @@ function changeSlide () {
             current = (current + 1);
         }
         else{
-            current = 0
+            current = 0;
         }  
         localStorage.setItem("index", (current-1));
         $("#otsikko").hide().html(text.uutiset[current].otsikko).fadeIn(1500);
@@ -28,11 +28,11 @@ function changeSlide () {
     }, 3000);
     
     console.log(current);
-};   
+}
     
 function pauseFunction() { 
     $("#pauseplay").click(function() {
-            if(playOn == true){
+            if(playOn === true){
                 clearInterval(x);
                 playOn = false;
                 document.getElementById("pauseplay").innerHTML = ("Play");
@@ -49,7 +49,7 @@ function previous() {
     $("#prev").click(function(){
         clearInterval(x);
         
-        if(current == 0){
+        if(current === 0){
             current = 2;
         }
         else{
@@ -71,7 +71,7 @@ function next() {
             current = 0;
         }
         else{
-            current = (current + 1)
+            current = (current + 1);
         }
         
         $("#otsikko").hide().html(text.uutiset[current].otsikko).fadeIn(1500);
@@ -91,4 +91,4 @@ $.getJSON("https://korvenl1-ff958.firebaseio.com/.json",function(data){
     next();
 });
     
-}
+};
