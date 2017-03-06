@@ -149,3 +149,16 @@ body {
 	width: extend-to-zoom;
 }
  
+#uutisikkuna {
+    text-align: center;
+    height: 300px;
+}
+
+#controlPanel {
+    text-align: center;
+}
+
+#otsikko {
+    font-size: 20px;
+    margin-bottom: 10px;
+}

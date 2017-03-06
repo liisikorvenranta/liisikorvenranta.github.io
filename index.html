@@ -2,9 +2,12 @@
 <html>
 
 	<head>
-		
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="slideshow.js"></script>
 		<meta http-equiv="content-type" content="text/html;charset=utf-8"/>
-	    	<meta charset="UTF-8"/>
+	    <meta charset="UTF-8"/>
 		<meta name="author" content="Liisi Korvenranta"/>
 		<meta name="description" content="Kampanjasivut"/>
 		<meta name= "viewport" content="width=device-width, initial-scale=1.0"/>
@@ -13,7 +16,7 @@
 		<title> Ydinvoiman puolesta </title>
 		<link rel = "stylesheet" type="text/css" href="stylesheet.css"/>
 		<link rel = "stylesheet" type="text/css" href="normalize.css"/>
-		
+               
 	</head>
 	
 		<body>
@@ -33,35 +36,25 @@
 			
 			<section>
 				<img id="info" class="resize" src="lights1.jpg">
-				<article id="blog1" class="blogpost">
-					<h2>Miksi Ydinvoima?</h2>
-					<p> Kokoomusnuorten lahtokohtainen tavoite on tuottaa kotimaista paastotonta ydinvoimaa ilmastoa
- 					   saastuttavien fossiilisten polttoaineiden sijaan. Haluamme taten paasta eroon Venajan tuontiriippuvuudesta ja ilmastoa saastuttavista
- 					   energiamuodoista. Taman tavoitteen saavuttamiseksi Suomeen tulee rakentaa kaksi uutta yksityisesti rahoitettua ydinvoimalaa. Tama ei
- 					   maksa suomalaiselle veronmaksajalle mitaan. Painvastoin, kokonaan yksityisesti rahoitettu ydinvoima tuo vaurautta, tyota, verotuloja
- 					   ja siten hyvinvointia. Nailla tuloilla voimme maksaa seka uusiutuvista, etta uusiutumattomista energiamuodoista koituvan jattilaskun.
-					   Uusi ydinvoima on myos vanhaa luotettavampaa ja turvallisempaa. Fortumin nykyiset kaksi ydinvoimalaa tulevat elinkaarensa loppuun ensi
- 				           vuosikymmenen loppuun mennessa. Yksi uusi ydinvoimala nykyaikaisella tekniikalla voisi korvata kaksi vanhaa. Rakennusluvan antaminen
- 					   suomalaiselle energiayhtiolle siis vahentaisi ydinvoimaloiden maaraa Suomessa. 
-					   Haluamme kampanjallamme murtaa yleisia ennakkoluuloja ydinvoiman turvallisuudesta ihmiselle ja luonnolle. Toisin kuin usein ajatellaan,
- 					   suomalainen, oikein tuotettu ja valvottu ydinvoima on turvallista ja paastotonta. Ydinjatteen loppusijoitukselle on Suomessa olemassa
- 					   suunnitelma, ja laajan peruskalliomme ansiosta loppusijoituspaikat eivat lopu viela pitkaan aikaan. Ydinvoima tuottaa ymparistoonsa
- 					   vahemman radioaktiivisia paastoja kuin hiilivoima, ja roimasti vahemman kasvihuonepaastoja.
-					   Me Kokoomusnuorissa haluamme, etta suomalainen energiapolitiikka on tulevaisuudessa kestavalla pohjalla seka ilmaston etta energian
-					   omavaraisuuden kannalta. Uuden ydinvoimalan rakentaminen tuo meille niita rahallisia resursseja, joita tarvitsemme jotta voimme kehittaa
- 					   uusiutuvista energiamuodoista tarpeeksi tehokkaita tulevaisuuden tarpeisiin. Jotta tulevaisuudessa voimme tuottaa energiaa viela
- 					   kestavemmilla tavoilla, tarvitsemme ydinvoimaa nyt.</p>										
+				<article id="uutisikkuna" class="blogpost">
+                    <div id="otsikko"></div>
+                    <div id="pvm"></div>
+                    <div id="sisältö"></div>       
 				</article>
-				
+				<div id="controlPanel">
+					    <button id="prev">←</button>	
+                        <button id="pauseplay">Pause</button>	
+                        <button id="next">→</button>	
+                </div>
 				<article id="contact" class="blogpost">
 					<h3>Ota yhteytta!</h3>
-					<p id="contacttext">kokoomusnuoret@gmail.com <br> +358503509617 </p>
+					<p id="contacttext">kokmusnuoret@gmail.com <br> +358503509617 </p>
 					<img id="logo" src="logo.jpg">
 				</article>
 			</section>
 
 		<footer id="footer" class="footer">
-				<p id="footertext">Liisi Korvenranta Copyright 2017 Kokoomusnuoret</p>
+				<p id="footertext">Liisi Korvenranta Copyright 2017 Kokmusnuoret</p>
 			</footer>
 		</body>
 	
