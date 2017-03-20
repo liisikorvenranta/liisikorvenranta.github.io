@@ -6,6 +6,7 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
         <script src="slideshow.js"></script>
+        <script src="canvas.js"></script>
 		<meta http-equiv="content-type" content="text/html;charset=utf-8"/>
 	    <meta charset="UTF-8"/>
 		<meta name="author" content="Liisi Korvenranta"/>
@@ -36,7 +37,7 @@
 			
 			<section>
                 
-                <video class="resize" width="640" height="360" controls poster="prtsc.png">
+                <video id="v" class="resize" width="640" height="360" controls poster="prtsc.png">
                     <source src="vjp_video.mp4" type="video/mp4">
 	                <source src="vjp_video.webm" type="video/webm">
                     <source src="vjp_video.ogv" type="video/ogg">
@@ -53,7 +54,9 @@
 	               Closed Format:	<a href="vjp_video.mp4">"MP4"</a>
 	               Open Format:	<a href="vjp_video.ogv">"Ogg"</a>
                 </p>
-                
+                <div>
+                    <canvas id="c" class="resize"></canvas>
+                </div>
 				<img id="info" class="resize" src="lights1.jpg">
 				<article id="uutisikkuna" class="blogpost" >
                     <div id="otsikko"></div>
