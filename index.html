@@ -41,7 +41,15 @@
 	                <source src="vjp_video.webm" type="video/webm">
                     <source src="vjp_video.ogv" type="video/ogg">
                     <source src="vjp_video.mpg" type="video/mpg">
+                    <object type="application/x-shockwave-flash" data="http://releases.flowplayer.org/swf/flowplayer-3.2.1.swf" width="640" height="360">
+		              <param name="movie" value="http://releases.flowplayer.org/swf/flowplayer-3.2.1.swf" />
+		              <param name="allowFullScreen" value="true" />
+		              <param name="wmode" value="transparent" />
+		              <param name="flashVars" value="config={'playlist':['prtsc.png',{'url':'vjp_video.mp4','autoPlay':false}]}" />
+		              <img alt="YDINVOIMAVIDEO" src="prtsc.png" width="640" height="360" title="No video playback capabilities, please download the video below" />
+	               </object>
                 </video>
+                
 				<img id="info" class="resize" src="lights1.jpg">
 				<article id="uutisikkuna" class="blogpost" >
                     <div id="otsikko"></div>
