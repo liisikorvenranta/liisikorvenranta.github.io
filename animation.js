@@ -62,6 +62,7 @@ var main = function() {
   update(delta / 1000);
   render();
   moveEnemy();
+  crash();
 
   then = now;
 

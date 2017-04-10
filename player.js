@@ -46,3 +46,21 @@ function movePlayer(dir) {
   }
 };
 
+function crash () {
+    for(var i in enemies){
+    if (
+		player.x <= (enemies[i].x + 32)
+		&& enemies[i].x <= (player.x + 32)
+		&& player.y <= (enemies[i].y + 32)
+		&& enemies[i].y <= (player.y + 32)
+	) {
+		/*enemies.splice(i,1);*/
+        if(enemies[i].direction == 0){enemies[i].direction = 1;break};
+        if(enemies[i].direction == 1){enemies[i].direction = 0;break};
+        if(enemies[i].direction == 2){enemies[i].direction = 3;break};
+        if(enemies[i].direction == 3){enemies[i].direction = 2;break};
+        
+	}
+    }
+};
+
