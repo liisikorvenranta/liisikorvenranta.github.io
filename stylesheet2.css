@@ -1,0 +1,14 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+}
+
+#buttons {
+    margin-left: 100;
+    margin-top: 10;
+    margin-bottom: 10;
+}
+
+
+
