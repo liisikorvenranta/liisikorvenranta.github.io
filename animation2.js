@@ -10,6 +10,9 @@ function preload() {
     //  The second parameter is the URL of the image (relative)
     game.load.image('iceberg', 'iceberg.png');
     game.load.image('coal', 'coal.png');
+    game.load.image('bear1','jaakarhu3.png');
+    game.load.image('bear2','jaakarhu4.png');
+    game.load.image('atom','atom.png');
 
 }
 
@@ -24,7 +27,11 @@ function create() {
     //  displays it on-screen
     var b = game.add.sprite(0, 0, 'iceberg');
     var c = game.add.image(randomInteger(10,390),0,'coal');
+    var a = game.add.image(randomInteger(10,390),0,'atom');
+    a.width = 35;
+    a.height = 35;
     c.width = 35;
     c.height = 35;
+    var j = game.add.image(200,300,'bear1');
 
 }
