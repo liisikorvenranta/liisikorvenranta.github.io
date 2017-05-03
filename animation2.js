@@ -6,15 +6,20 @@ function preload() {
     game.load.image('alien', 'coal.png');
     game.load.image('ship', 'jaakarhu3.png');
     game.load.image('iceberg','iceberg.png');
-
+    
+   
 }
 
 var player;
 var aliens;
+var atoms;
 
 function create() {
     
     var b = game.add.sprite(0, 0, 'iceberg');
+    b.height=600;
+    b.width=800;
+    
 
     //  We only want world bounds on the left and right
     game.physics.setBoundsToWorld();
@@ -31,6 +36,8 @@ function create() {
         for (var x = 0; x < 10; x++)
         {
             var alien = aliens.create(200 + x * 48, y * 50, 'alien');
+            alien.width=35;
+            alien.height=35;
             alien.name = 'alien' + x.toString() + y.toString();
             alien.checkWorldBounds = true;
             alien.events.onOutOfBounds.add(alienOut, this);
