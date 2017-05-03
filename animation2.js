@@ -5,6 +5,7 @@ function preload() {
 
     game.load.image('alien', 'coal.png');
     game.load.image('ship', 'jaakarhu3.png');
+    game.load.image('right', 'jaakarhu4.png');
     game.load.image('iceberg','iceberg.png');
     game.load.image('atom','atom.png');
    
@@ -19,29 +20,30 @@ function create() {
     var b = game.add.sprite(0, 0, 'iceberg');
     b.height=600;
     b.width=800;
-    
 
     //  We only want world bounds on the left and right
     game.physics.setBoundsToWorld();
 
-    player = game.add.sprite(400, 500, 'ship');
+    player = game.add.sprite(400, 520, 'ship');
     player.anchor.setTo(0.5, 0.5);
+    player.height = 94;
+    player.width = 132;
 
     aliens = game.add.group();
     aliens.enableBody = true;
     aliens.physicsBodyType = Phaser.Physics.ARCADE;
 
-    for (var y = 0; y < 4; y++)
+    for (var y = 0; y < 2; y++)
     {
-        for (var x = 0; x < 10; x++)
+        for (var x = 0; x < 5; x++)
         {
-            var alien = aliens.create(200 + x * 48, y * 50, 'alien');
+            var alien = aliens.create(x * 180, y * 70, 'alien');
             alien.width=35;
             alien.height=35;
             alien.name = 'alien' + x.toString() + y.toString();
             alien.checkWorldBounds = true;
             alien.events.onOutOfBounds.add(alienOut, this);
-            alien.body.velocity.y = 50 + Math.random() * 200;
+            alien.body.velocity.y = 50 + Math.random() * 130;
         }
     }
     
@@ -50,17 +52,17 @@ function create() {
     atoms.physicsBodyType = Phaser.Physics.ARCADE;
     
     
-    for (var y = 0; y < 4; y++)
+    for (var y = 0; y < 2; y++)
     {
-        for (var x = 0; x < 10; x++)
+        for (var x = 0; x < 8; x++)
         {
-            var atom = atoms.create(200 + x * 48, y * 50, 'atom');
+            var atom = atoms.create(x * 120, y * 70, 'atom');
             atom.width=35;
             atom.height=35;
             atom.name = 'atom' + x.toString() + y.toString();
             atom.checkWorldBounds = true;
             atom.events.onOutOfBounds.add(atomOut, this);
-            atom.body.velocity.y = 50 + Math.random() * 200;
+            atom.body.velocity.y = 50 + Math.random() * 80;
         }
     }
 
@@ -86,54 +88,23 @@ function atomOut(atom) {
 
 }
 
+/*cursors = game.input.keyboard.createCursorKeys();
 
-
-/*var game = new Phaser.Game(600, 400, Phaser.CANVAS, 'ydinvoima', { preload: preload, create: create });
-
-var xcord = 200;
-
-function preload() {
-
-    //  You can fill the preloader with as many assets as your game requires
-
-    //  Here we are loading an image. The first parameter is the unique
-    //  string by which we'll identify the image later in our code.
-
-    //  The second parameter is the URL of the image (relative)
-    game.load.image('iceberg', 'iceberg.png');
-    game.load.image('coal', 'coal.png');
-    game.load.image('bear1','jaakarhu3.png'); //vasen
-    game.load.image('bear2','jaakarhu4.png'); //oikea
-    game.load.image('atom','atom.png');
-
-}
-
-function randomInteger (min, max) {
-    rand = Math.floor((Math.random() * max) + min);
-    return rand;
-};
-
-function create() {
-
-    //  This creates a simple sprite that is using our loaded image and
-    //  displays it on-screen 
-    /*var c = game.add.image(randomInteger(10,390),0,'coal');
-    c.width = 35;
-    c.height = 35;
-    var a = game.add.image(randomInteger(10,390),0,'atom');
-    a.width = 35;
-    a.height = 35;
-    var j = game.add.image(xcord,300,'bear1');
+/*function update (){
     
-    var b = game.add.sprite(0, 0, 'iceberg');
-    
-    game.create.texture('coalimg', 'coal.png', 4, 4, 4);
-    
+    if (cursors.left.isDown)
+        {
+            player.body.velocity.x = -200;
+        }
+        else if (cursors.right.isDown)
+        {
+            player.body.velocity.x = 200;
+        }
+}*/
+
+
+/*
     cursors = game.input.keyboard.createCursorKeys();
-	
-    game.physics.startSystem(Phaser.Physics.ARCADE);
-    
-    coals = game.add.physicsGroup();
     
     var y = 80;
 
