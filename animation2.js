@@ -28,15 +28,22 @@ function create() {
     //  This creates a simple sprite that is using our loaded image and
     //  displays it on-screen
     var b = game.add.sprite(0, 0, 'iceberg');
-    var c = game.add.image(randomInteger(10,390),0,'coal');
-    var a = game.add.image(randomInteger(10,390),0,'atom');
-    a.width = 35;
-    a.height = 35;
+    /*var c = game.add.image(randomInteger(10,390),0,'coal');
     c.width = 35;
     c.height = 35;
+    var a = game.add.image(randomInteger(10,390),0,'atom');
+    a.width = 35;
+    a.height = 35;*/
+    
+    game.create.texture('coal', 'coal.png', 4, 4, 4);
+    
     var j = game.add.image(xcord,300,'bear1');
-	game.physics.enable(j, Phaser.Physics.ARCADE);
-	j.body.velocity.x=150;
+    
+    cursors = game.input.keyboard.createCursorKeys();
+	
+    game.physics.startSystem(Phaser.Physics.ARCADE);
+	
+    j.body.velocity.x=150;
 
 }
 
