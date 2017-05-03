@@ -6,7 +6,7 @@ function preload() {
     game.load.image('alien', 'coal.png');
     game.load.image('ship', 'jaakarhu3.png');
     game.load.image('iceberg','iceberg.png');
-    
+    game.load.image('atom','atom.png');
    
 }
 
@@ -44,6 +44,25 @@ function create() {
             alien.body.velocity.y = 50 + Math.random() * 200;
         }
     }
+    
+    atoms = game.add.group();
+    atoms.enableBody = true;
+    atoms.physicsBodyType = Phaser.Physics.ARCADE;
+    
+    
+    for (var y = 0; y < 4; y++)
+    {
+        for (var x = 0; x < 10; x++)
+        {
+            var atom = atoms.create(200 + x * 48, y * 50, 'atom');
+            atom.width=35;
+            atom.height=35;
+            atom.name = 'atom' + x.toString() + y.toString();
+            atom.checkWorldBounds = true;
+            atom.events.onOutOfBounds.add(atomOut, this);
+            atom.body.velocity.y = 50 + Math.random() * 200;
+        }
+    }
 
 }
 
@@ -56,6 +75,18 @@ function alienOut(alien) {
     alien.body.velocity.y = 50 + Math.random() * 200;
 
 }
+
+function atomOut(atom) {
+
+    //  Move the alien to the top of the screen again
+    atom.reset(atom.x, 0);
+
+    //  And give it a new random velocity
+    atom.body.velocity.y = 50 + Math.random() * 200;
+
+}
+
+
 
 /*var game = new Phaser.Game(600, 400, Phaser.CANVAS, 'ydinvoima', { preload: preload, create: create });
 
