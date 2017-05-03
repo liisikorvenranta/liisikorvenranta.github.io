@@ -12,8 +12,6 @@ var player = {
 function drawPlayer(context) {
   var x = player.x - (player.w / 2);
   var y = player.y - (player.h / 2);
-  /*context.fillStyle = 'red';
-  context.fillRect(x,y, player.w, player.h);*/
   context.drawImage(turtle, x, y, player.w, player.h);
 };
 

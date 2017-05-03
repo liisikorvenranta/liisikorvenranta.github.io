@@ -62,8 +62,6 @@ function drawEnemy(context) {
    $.each(enemies, function(index, enemy){
     var x =  enemy.x - (enemy.w / 2);
     var y = enemy.y - (enemy.h / 2);
-    /*context.fillStyle = 'yellow';
-    context.fillRect(x,y, enemy.w, enemy.h);*/
     context.drawImage(coal, x, y, enemy.w, enemy.h);
 })  
 }; 

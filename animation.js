@@ -32,8 +32,6 @@ document.querySelector("#fast").onclick = function () {
 /* Draw everything */
 var render = function() {
   ctx.drawImage(nuclear, 0, 0, canvas.width, canvas.height);
-  /*ctx.fillStyle = '#000000';
-  ctx.fillRect(0,0,500,500);*/
   drawPlayer(ctx);
   drawEnemy(ctx);
 };
@@ -76,29 +74,4 @@ main();
     
 
   
-});
-
-
-
-/*var batImage = new Image();
-batImage.src = "bat.png";
-function sprite (options) {
-				
-    var that = {};
-					
-    that.context = options.context;
-    that.width = options.width;
-    that.height = options.height;
-    that.image = options.image;
-
-    return that;
-}    
-
-var bat = sprite({
-    context: canvas.getContext("2d"),
-    width: 100,
-    height: 100,
-    image: batImage
-});
-    
-context.drawImage(img, sx, sy, sw, sh, dx, dy, dw, dh);*/   
+}); 
