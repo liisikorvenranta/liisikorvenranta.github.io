@@ -33,5 +33,7 @@ function create() {
     c.width = 35;
     c.height = 35;
     var j = game.add.image(200,300,'bear1');
+	game.physics.enable(j, Phaser.Physics.ARCADE);
+	j.body.velocity.x=150;
 
 }
