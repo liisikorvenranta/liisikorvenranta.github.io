@@ -102,10 +102,12 @@ function update() {
 
        if (game.input.keyboard.isDown(Phaser.Keyboard.LEFT))
     {
+        player.loadTexture('left',0,false);
         player.x -= 4;
     }
     else if (game.input.keyboard.isDown(Phaser.Keyboard.RIGHT))
     {
+        player.loadTexture('right',0,false);
         player.x += 4;
     }
 }
