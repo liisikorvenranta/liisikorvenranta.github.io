@@ -40,6 +40,9 @@ function newAtom(x){
 
 function create() {
     
+    this.scale.pageAlignHorizontally = true;
+    this.scale.pageAlignVertically = true;
+    
     var b = game.add.sprite(0, 0, 'iceberg'); //background
     b.height=600;
     b.width=800;
