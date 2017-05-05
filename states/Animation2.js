@@ -1,9 +1,13 @@
 var Animation2 = function(game){};
+
+
+
 Animation2.prototype = {
 
 var player;
 var aliens;
 var atoms;
+
 
 newAlien: function(x) {
     

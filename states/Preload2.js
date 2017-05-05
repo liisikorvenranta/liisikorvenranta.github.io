@@ -10,11 +10,11 @@ Preload2.prototype = {
     game.load.image('atom','atom.png');  
     }
  
-    /*create: function() {
+    create: function() {
 	console.log(3);
     this.game.state.start("Title2");
     }
  
-    */
+    
  
 }
