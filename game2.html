@@ -7,22 +7,9 @@
             crossorigin="anonymous">
         </script>
         <script src="phaser.js"></script>
-    	<script src="states/Boot2.js"></script>
-		<script src="states/Preload2.js"></script>
-		<script src="states/Title2.js"></script>
-		<script src="states/Animation2.js"></script>
-		<script>
-			(function() {
-				var game = new Phaser.Game(320, 480, Phaser.CANVAS, "game");
-				game.state.add("Boot2",Boot2);
-				game.state.add("Preload2",Preload2);
-				game.state.add("Title2",Title2);
-				game.state.add("Animation2",Animation2);
-				console.log(1);
-				game.state.start("Boot2");
-			})();
-		</script>
+        <script src="animation2.js"></script>
     </head>
-    <body>    
+    <body>
+        
     </body>
 </html>

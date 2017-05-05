@@ -1,15 +1,20 @@
-var Animation2 = function(game){};
+var game = new Phaser.Game(800, 600, Phaser.AUTO, 'phaser-example', { preload: preload, create: create, update: update});
 
+function preload() {
 
-
-Animation2.prototype = {
+    game.load.image('alien', 'coal.png');
+    game.load.image('left', 'jaakarhu3.png');
+    game.load.image('right', 'jaakarhu4.png');
+    game.load.image('iceberg','iceberg.png');
+    game.load.image('atom','atom.png');
+   
+}
 
 var player;
 var aliens;
 var atoms;
 
-
-newAlien: function(x) {
+function newAlien(x) {
     
     var alien = aliens.create(x * 80, 0, 'alien');
     alien.width=35;
@@ -21,7 +26,7 @@ newAlien: function(x) {
     
 }
 
-newAtom: function (x){
+function newAtom(x){
     
     var atom = atoms.create(x * 53, 0, 'atom');
     atom.width=35;
@@ -33,7 +38,7 @@ newAtom: function (x){
     
 }
 
-create: function() {
+function create() {
     
     this.scale.pageAlignHorizontally = true;
     this.scale.pageAlignVertically = true;
@@ -73,17 +78,17 @@ create: function() {
         }
 }
 
-alienOut: function(alien) { 
+function alienOut(alien) { 
 
     //  Move the alien to the top of the screen again
     alien.reset(alien.x, 0);
 
     //  And give it a new random velocity
-    alien.body.velocity.y = 50 + Math.random() * 300;
+    alien.body.velocity.y = 50 + Math.random() * 200;
 
 }
 
-atomOut: function(atom) {
+function atomOut(atom) {
 
     //  Move the alien to the top of the screen again
     atom.reset(atom.x, 0);
@@ -93,8 +98,7 @@ atomOut: function(atom) {
 
 }
 
-update: function() {
- {
+function update() {
     
      game.physics.arcade.overlap(player, aliens, collisionHandler, null, this);
      game.physics.arcade.overlap(player, atoms, collisionHandler2, null, this);
@@ -111,7 +115,7 @@ update: function() {
     }
 }
 
-collisionHandler: function (player, alien) { //coal collision
+function collisionHandler (player, alien) { //coal collision
     
     var newX = Math.random() * 10;
     aliens.remove(alien); 
@@ -119,7 +123,7 @@ collisionHandler: function (player, alien) { //coal collision
     
 }
 
-collisionHandler2: function (player, atom) { //atom collision
+function collisionHandler2 (player, atom) { //atom collision
     
     var newX2 = Math.random() * 15;
     atoms.remove(atom);
@@ -127,4 +131,4 @@ collisionHandler2: function (player, atom) { //atom collision
     
 }
 
-}
+
