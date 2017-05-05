@@ -75,7 +75,7 @@ alienOut: function(alien) {
     alien.reset(alien.x, 0);
 
     //  And give it a new random velocity
-    alien.body.velocity.y = 50 + Math.random() * 200;
+    alien.body.velocity.y = 50 + Math.random() * 300;
 
 }
 
