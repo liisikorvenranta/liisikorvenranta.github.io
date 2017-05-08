@@ -1,68 +1,28 @@
-var game = new Phaser.Game(800, 600, Phaser.AUTO, 'phaser-example', { preload: preload, create: create, update: update});
-
-var score = 2020;
+//var game = new Phaser.Game(800, 600, Phaser.AUTO, 'phaser-example', { preload: preload, create: create, update: update});
+var score;
 var scoreText;
-var gameOn = false;
 var mittari;
 var tracker = 1;
 var co2text; 
 var x = 300;
 var y = 200;
-function preload() {
+var gameOn = false;
 
-    game.load.image('alien', 'coal.png');
-    game.load.image('left', 'jaakarhu3c.png');
-    game.load.image('right', 'jaakarhu4c.png');
-    game.load.image('iceberg','iceberg.png');
-    game.load.image('atom','atomc.png');
-    game.load.image('mittari1','comittarit/comittari1c.png')
-	game.load.image('mittari2','comittarit/comittari2c.png')
-	game.load.image('mittari3','comittarit/comittari3c.png')
-	game.load.image('mittari4','comittarit/comittari4c.png')
-	game.load.image('mittari5','comittarit/comittari5c.png')
-	game.load.image('mittari6','comittarit/comittari6c.png')
-	game.load.image('mittari7','comittarit/comittari7c.png')
-	game.load.image('mittari8','comittarit/comittari8c.png')
-	game.load.image('mittari9','comittarit/comittari9c.png')
-	game.load.image('mittari10','comittarit/comittari10c.png')
-	game.load.image('mittari11','comittarit/comittari11c.png')
-	game.load.image('mittari12','comittarit/comittari12c.png')
-	game.load.image('mittari13','comittarit/comittari13c.png')
-	game.load.image('mittari14','comittarit/comittari14c.png')
-	game.load.image('mittari15','comittarit/comittari15c.png')
-	game.load.image('mittari16','comittarit/comittari16c.png')
+var theGame = function(game) {
+    var player;
+    var aliens;
+    var atoms;
 	
 }
 
-var player;
-var aliens;
-var atoms;
-function newAlien(x) {
-    
-    var alien = aliens.create(x * 80, 0, 'alien');
-    alien.width=35;
-    alien.height=35;
-    /*alien.name = 'alien' + x.toString() + y.toString();*/
-    alien.checkWorldBounds = true;
-    alien.events.onOutOfBounds.add(alienOut, this);
-    alien.body.velocity.y = 100 + Math.random() * 200; 
-    
-}
 
-function newAtom(x){
-    
-    var atom = atoms.create(x * 160, 0, 'atom');
-    atom.width=35;
-    atom.height=35;
-    /*atom.name = 'atom' + x.toString() + y.toString();*/
-    atom.checkWorldBounds = true;
-    atom.events.onOutOfBounds.add(atomOut, this);
-    atom.body.velocity.y = 50 + Math.random() * 80;
-    
-}
+theGame.prototype = {
 
-function create() {
+create: function() {
     
+    music = game.add.audio('musa');
+    music.loopFull(); //uus
+    score = 2033;
     this.scale.pageAlignHorizontally = true;
     this.scale.pageAlignVertically = true;
     
@@ -100,14 +60,37 @@ function create() {
             newAtom(x);
         }
     
-    scoreText = game.add.text(10, 570, 'THE ICE WILL MELT IN 2020', { font: "25px Arial", fill: "#000000", align: "left" });
+    scoreText = game.add.text(10, 570, 'THE ICE WILL MELT IN 2033', { font: "25px Courier", fill: "#000000", align: "left" });
 	
 	var mittari = game.add.sprite(0, 0, 'mittari' + tracker);
 	mittari.height = 50;
 	mittari.width = 300; 
-    co2text= game.add.text(10, 60 , 'CO2-INDICATOR', { font: "25px Arial", fill: "#000000", align: "left" });
+    co2text= game.add.text(10, 60 , 'CO2-INDICATOR', { font: "25px Courier", fill: "#000000", align: "left" });
+	
+	
+function newAlien(x)  {
+    
+    var alien = aliens.create(x * 80, 0, 'alien');
+    alien.width=35;
+    alien.height=35;
+    /*alien.name = 'alien' + x.toString() + y.toString();*/
+    alien.checkWorldBounds = true;
+    alien.events.onOutOfBounds.add(alienOut, this);
+    alien.body.velocity.y = 100 + Math.random() * 200; 
+    
 }
 
+function newAtom(x) {
+    
+    var atom = atoms.create(x * 160, 0, 'atom');
+    atom.width=35;
+    atom.height=35;
+    /*atom.name = 'atom' + x.toString() + y.toString();*/
+    atom.checkWorldBounds = true;
+    atom.events.onOutOfBounds.add(atomOut, this);
+    atom.body.velocity.y = 50 + Math.random() * 80;
+    
+}
 function alienOut(alien) { 
 
     //  Move the alien to the top of the screen again
@@ -129,8 +112,96 @@ function atomOut(atom) {
 	
 
 }
+},
 
-function update() {
+update: function () {
+	
+	function alienOut(alien) { 
+
+    //  Move the alien to the top of the screen again
+    alien.reset(alien.x, 0);
+
+    //  And give it a new random velocity
+    alien.body.velocity.y = 50 + Math.random() * x;
+	x += 1;
+
+}
+
+function atomOut(atom) {
+
+    //  Move the alien to the top of the screen again
+    atom.reset(atom.x, 0);
+
+    //  And give it a new random velocity
+    atom.body.velocity.y = 50 + Math.random() * y;
+	
+
+}
+	
+	function newAlien(x)  {
+    
+    var alien = aliens.create(x * 80, 0, 'alien');
+    alien.width=35;
+    alien.height=35;
+    /*alien.name = 'alien' + x.toString() + y.toString();*/
+    alien.checkWorldBounds = true;
+    alien.events.onOutOfBounds.add(alienOut, this);
+    alien.body.velocity.y = 100 + Math.random() * 200; 
+    
+}
+
+function newAtom(x) {
+    
+    var atom = atoms.create(x * 160, 0, 'atom');
+    atom.width=35;
+    atom.height=35;
+    /*atom.name = 'atom' + x.toString() + y.toString();*/
+    atom.checkWorldBounds = true;
+    atom.events.onOutOfBounds.add(atomOut, this);
+    atom.body.velocity.y = 50 + Math.random() * 80;
+    
+}
+	
+	function collisionHandler(player, alien) { //coal collision
+        
+    music = game.add.audio('hiili');
+    music.play(); //uus    
+    
+    var newX = Math.random() * 10;
+    aliens.remove(alien); 
+    newAlien(newX);
+    score -= 1;
+    scoreText.text = 'THE ICE WILL MELT IN ' + score;
+	tracker += 1
+	if (mittari != null){
+		mittari.destroy();
+	}
+	
+	mittari = game.add.sprite(0, 0, 'mittari' + tracker);
+	mittari.height = 50;
+	mittari.width = 300; 
+	
+	
+	if(tracker >= 16) {
+        //score = 2033;
+        tracker = 1;
+        /*this.game.state.states["GameOver"].finalYear = this.score;*/
+		this.game.state.start("GameOver");
+	}
+}
+
+function collisionHandler2(player, atom) { //atom collision
+    
+    music = game.add.audio('atomi');
+    music.play(); //uus
+    var newX2 = Math.random() * 5;
+    atoms.remove(atom);
+    newAtom(newX2);
+    score += 1;
+    scoreText.text = 'THE ICE WILL MELT IN ' + score;
+	
+    
+}
     
      game.physics.arcade.overlap(player, aliens, collisionHandler, null, this);
      game.physics.arcade.overlap(player, atoms, collisionHandler2, null, this);
@@ -152,34 +223,4 @@ function update() {
     
 }
 
-function collisionHandler (player, alien) { //coal collision
-    
-    var newX = Math.random() * 10;
-    aliens.remove(alien); 
-    newAlien(newX);
-    score -= 1;
-    scoreText.text = 'THE ICE WILL MELT IN ' + score;
-	tracker += 1
-	if (mittari != null){
-		mittari.destroy();
-	}
-	
-	mittari = game.add.sprite(0, 0, 'mittari' + tracker);
-	mittari.height = 50;
-	mittari.width = 300; 
-	
-    
-    
-    
-}
-
-function collisionHandler2 (player, atom) { //atom collision
-    
-    var newX2 = Math.random() * 5;
-    atoms.remove(atom);
-    newAtom(newX2);
-    score += 1;
-    scoreText.text = 'THE ICE WILL MELT IN ' + score;
-	
-    
 }
