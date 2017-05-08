@@ -3,7 +3,9 @@ var game = new Phaser.Game(800, 600, Phaser.AUTO, 'phaser-example', { preload: p
 var score = 2020;
 var scoreText;
 var gameOn = false;
-
+var mittari;
+var tracker = 1;
+var co2text; 
 function preload() {
 
     game.load.image('alien', 'coal.png');
@@ -103,7 +105,7 @@ function create() {
 	var mittari = game.add.sprite(0, 0, 'mittari' + tracker);
 	mittari.height = 50;
 	mittari.width = 300; 
-    
+    co2text= game.add.text(10, 60, 'CO2-INDICATOR', { font: "25px Arial", fill: "#000000", align: "left" });
 }
 
 function alienOut(alien) { 
