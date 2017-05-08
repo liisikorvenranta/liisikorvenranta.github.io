@@ -60,7 +60,7 @@ create: function() {
             newAtom(x);
         }
     
-    scoreText = game.add.text(10, 570, 'THE ICE WILL MELT IN 2033', { font: "25px Courier", fill: "#000000", align: "left" });
+    scoreText = game.add.text(370, 10, 'THE ICE WILL MELT IN 2033', { font: "25px Courier", fill: "#000000", align: "left" });
 	
 	var mittari = game.add.sprite(0, 0, 'mittari' + tracker);
 	mittari.height = 50;
