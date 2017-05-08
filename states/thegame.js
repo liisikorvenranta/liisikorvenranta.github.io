@@ -6,6 +6,8 @@ var gameOn = false;
 var mittari;
 var tracker = 1;
 var co2text; 
+var x = 300;
+var y = 200;
 function preload() {
 
     game.load.image('alien', 'coal.png');
@@ -35,8 +37,6 @@ function preload() {
 var player;
 var aliens;
 var atoms;
-var mittari;
-var tracker = 1;
 function newAlien(x) {
     
     var alien = aliens.create(x * 80, 0, 'alien');
@@ -105,7 +105,7 @@ function create() {
 	var mittari = game.add.sprite(0, 0, 'mittari' + tracker);
 	mittari.height = 50;
 	mittari.width = 300; 
-    co2text= game.add.text(10, 60, 'CO2-INDICATOR', { font: "25px Arial", fill: "#000000", align: "left" });
+    co2text= game.add.text(10, 60 , 'CO2-INDICATOR', { font: "25px Arial", fill: "#000000", align: "left" });
 }
 
 function alienOut(alien) { 
@@ -114,7 +114,8 @@ function alienOut(alien) {
     alien.reset(alien.x, 0);
 
     //  And give it a new random velocity
-    alien.body.velocity.y = 50 + Math.random() * 300;
+    alien.body.velocity.y = 50 + Math.random() * x;
+	x += 1;
 
 }
 
@@ -124,7 +125,8 @@ function atomOut(atom) {
     atom.reset(atom.x, 0);
 
     //  And give it a new random velocity
-    atom.body.velocity.y = 50 + Math.random() * 200;
+    atom.body.velocity.y = 50 + Math.random() * y;
+	
 
 }
 
