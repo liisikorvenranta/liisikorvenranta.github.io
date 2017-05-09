@@ -1,27 +1,32 @@
 <html>
     <head>
-        <title>Game2</title>
+        <title>Game</title>
         <script 
-            src="https://code.jquery.com/jquery-3.2.1.min.js"
-            integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-            crossorigin="anonymous">
+				
+			src="https://code.jquery.com/jquery-3.2.1.min.js"
+			integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+			crossorigin="anonymous">
+			
         </script>
 		
-    		<script src="states/boot.js"></script>
-		<script src="states//preload.js"></script>
-		<script src="states//gametitle.js"></script>
-		<script src="states//thegame.js"></script>
-		<script src="states//gameover.js"></script>	
+    	<script src="states/boot.js"></script>
+		<script src="states/preload.js"></script>
+		<script src="states/gametitle.js"></script>
+		<script src="states/thegame.js"></script>
+		<script src="states/gameover.js"></script>	
+		<script src="states/win.js"></script>	
         <script src="phaser.js"></script>
+		
 		<script>
 			
-				var game = new Phaser.Game(800, 600, Phaser.CANVAS, "game");
-				game.state.add("Boot",boot);
-				game.state.add("Preload",preload);
-				game.state.add("GameTitle",gameTitle);
-				game.state.add("TheGame",theGame);
-				game.state.add("GameOver",gameOver);
-				game.state.start("Boot");
+			var game = new Phaser.Game(800, 600, Phaser.CANVAS, "game");
+			game.state.add("Boot",boot);
+			game.state.add("Preload",preload);
+			game.state.add("GameTitle",gameTitle);
+			game.state.add("TheGame",theGame);
+			game.state.add("GameOver",gameOver);
+			game.state.add("Win",win);
+			game.state.start("Boot");
 		    
 		</script>
     </head>

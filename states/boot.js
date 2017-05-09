@@ -1,9 +1,8 @@
 var boot = function(game){};
   
-boot.prototype = {
+boot.prototype = { //boots the game
 
   	create: function(){
-		/*this.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;*/
 		this.scale.pageAlignHorizontally = true;
 		console.log(2);
 		this.game.state.start("Preload");
