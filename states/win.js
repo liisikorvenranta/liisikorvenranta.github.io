@@ -5,6 +5,10 @@ var win = function(game){}
 win.prototype = { //win menu
 	
   	create: function(){
+		
+		this.scale.pageAlignHorizontally = true; //background settings
+		this.scale.pageAlignVertically = true;
+		
         music = game.add.audio('musa'); //background music
         music.play(); 
 		

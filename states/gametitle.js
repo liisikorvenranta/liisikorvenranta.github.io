@@ -4,6 +4,9 @@ var gameTitle = function(game){};
 gameTitle.prototype = {
 	
   	create: function(){	
+		
+		this.scale.pageAlignHorizontally = true; //background settings
+		this.scale.pageAlignVertically = true;
         
         music = game.add.audio('musa'); //music settings
         music.play(); 
