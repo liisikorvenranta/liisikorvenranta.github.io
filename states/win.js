@@ -17,7 +17,7 @@ win.prototype = { //win menu
         b.width=800;
 		
 		//text settings
-        var scoreText = game.add.text(125,265,"THE ICEBERGS SURVIVED UNTIL YEAR 2050", { font: "25px Courier", fill: "#000000", align: "left" });
+        var scoreText = game.add.text(240,265,"THE ICEBERGS SURVIVED!", { font: "25px Courier", fill: "#000000", align: "left" });
 		text= game.add.text(115,290,"YOU STOPPED THE CLIMATE CHANGE WITH NUCLEAR POWER",{ font: "20px Courier", fill: "#000000", align: "left" });
   		var gameOverTitle = this.game.add.sprite(400,200,"youwon");
 		gameOverTitle.anchor.setTo(0.5,0.5);
