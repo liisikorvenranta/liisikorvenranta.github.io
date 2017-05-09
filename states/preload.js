@@ -29,8 +29,8 @@ preload.prototype = {
 		game.load.image('meter16','co2meters/comittari16c.png')
 		game.load.image('youwon','pictures/youwon.png')
 		game.load.audio('musa', ['sounds/Oniku.wav']);//loading the sounds
-		game.load.audio('atomi', ['sounds/Plink.wav']);
-		game.load.audio('hiili', ['sounds/shuffle.wav']);
+		game.load.audio('atomi', ['sounds/plnk.wav']);
+		game.load.audio('hiili', ['sounds/shufle.wav']);
 	
     },
  
