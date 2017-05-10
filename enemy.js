@@ -1,6 +1,6 @@
 var coal = new Image();
 coal.src = "coal.png";
-
+//testipsakavtittu
 var enemies = new Array(); 
 
 function randomInteger (min, max) {
