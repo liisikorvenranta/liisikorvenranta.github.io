@@ -1,5 +1,5 @@
 var coal = new Image();
-coal.src = "coal2.png";
+coal.src = "coal.png";
 
 var enemies = new Array(); 
 
