@@ -23,11 +23,12 @@
 		
 			<nav class="navigation">
 				<ul>
-					<li><a href="#home">HOME</a> </li>
-					<li><a href="#info">INFO</a> </li>
-					<li><a href="#blog1">BLOG</a> </li>
-					<li><a href="#contacttext">CONTACT</a> </li>
-                    <li><a href="game2.html">GAME</a> </li>
+					<li><a href="#home">HOME</a></li>
+					<li><a href="#info">INFO</a></li>
+					<li><a href="#blog1">BLOG</a></li>
+					<li><a href="#contacttext">CONTACT</a></li>
+                    <li><a href="game.html">TESTGAME</a></li>
+                    <li><a href="game2.html">GAME</a></li>
 				</ul>	
 			</nav>
 		
@@ -36,12 +37,16 @@
 			</header>
 			
 			<section>
+                      
+				<img id="info" class="resize" src="lights1.jpg">
                 
                 <video id="v" class="resize" width="640" height="360" controls poster="prtsc.png">
+                    
                     <source src="vjp_video.mp4" type="video/mp4">
 	                <source src="vjp_video.webm" type="video/webm">
                     <source src="vjp_video.ogv" type="video/ogg">
                     <source src="vjp_video.mpg" type="video/mpg">
+                    
                     <object type="application/x-shockwave-flash" data="http://releases.flowplayer.org/swf/flowplayer-3.2.1.swf" width="640" height="360">
 		              <param name="movie" value="http://releases.flowplayer.org/swf/flowplayer-3.2.1.swf" />
 		              <param name="allowFullScreen" value="true" />
@@ -49,32 +54,33 @@
 		              <param name="flashVars" value="config={'playlist':['prtsc.png',{'url':'vjp_video.mp4','autoPlay':false}]}" />
 		              <img alt="YDINVOIMAVIDEO" src="prtsc.png" width="640" height="360" title="No video playback capabilities, please download the video below" />
 	               </object>
+                    
                 </video>
-                <p id="download">Download Video:
-	               Closed Format:	<a href="vjp_video.mp4">"MP4"</a>
-	               Open Format:	<a href="vjp_video.ogv">"Ogg"</a>
-                </p>
-				<img id="info" class="resize" src="lights1.jpg">
+                
 				<article id="uutisikkuna" class="blogpost" >
                     <div id="otsikko"></div>
                     <div id="pvm"></div>
                     <div id="sisältö"></div>       
 				</article>
+                
 				<div id="controlPanel">
 					    <button id="prev">←</button>	
                         <button id="pauseplay">Pause</button>	
                         <button id="next">→</button>	
                 </div>
+                
 				<article id="contact" class="blogpost">
 					<h3>Ota yhteytta!</h3>
 					<p id="contacttext">kokmusnuoret@gmail.com <br> +358503509617 </p>
 					<img id="logo" src="logo.jpg">
 				</article>
+                
 			</section>
 
-		<footer id="footer" class="footer">
-				<p id="footertext">Liisi Korvenranta Copyright 2017 Kokmusnuoret</p>
-			</footer>
+		    <footer id="footer" class="footer">
+                <p id="footertext">Liisi Korvenranta Copyright 2017 Kokmusnuoret</p>
+            </footer>
+            
 		</body>
 	
 </html>
