@@ -206,5 +206,71 @@ body {
     text-align: center;
 }
 
+.ongelmat {
+    display: flex;
+    flex-wrap: wrap;  
+    background-color: #f4f4f4;
+}
+
+.o {
+    max-width: 210px;
+    /*display: block;*/
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+	color: #848484;
+	font-family: 'Raleway', sans-serif;
+	font-size: 22px;
+    text-align: center;
+    margin-left: 100px;
+    margin-right: 100px;
+    
+}
+
+.ratkaisut {
+    display: flex;
+    flex-wrap: wrap;  
+    background-color: white;
+}
+
+.r {
+    max-width: 210px;
+    /*display: block;*/
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+	color: #848484;
+	font-family: 'Raleway', sans-serif;
+	font-size: 22px;
+    text-align: center;
+    margin-left: 100px;
+    margin-right: 100px;
+    
+}
+
+.faktat {
+    display: flex;
+    flex-wrap: wrap;  
+    background-color: #f4f4f4;
+}
+
+.f {
+    max-width: 210px;
+    /*display: block;*/
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+	color: #848484;
+	font-family: 'Raleway', sans-serif;
+	font-size: 22px;
+    text-align: center;
+    margin-left: 100px;
+    margin-right: 100px;
+    
+}
+
+#body {
+        flex-wrap: wrap;
+}
 
 

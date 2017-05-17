@@ -19,46 +19,85 @@
                
 	</head>
 	
-		<body>
+    <body id="body">
 		
-			<nav class="navigation">
-				<ul>
-					<li><a href="#home">HOME</a></li>
-					<li><a href="#info">INFO</a></li>
-					<li><a href="#blog1">BLOG</a></li>
-					<li><a href="#contacttext">CONTACT</a></li>
-                    <li><a href="game.html">TESTGAME</a></li>
-                    <li><a href="game2.html">GAME</a></li>
-                    <!-- lsjlakjdlkdj -->
-				</ul>	
-			</nav>
+        <nav class="navigation">
+            <ul>
+                <li><a href="#home">HOME</a></li>
+				<li><a href="#info">INFO</a></li>
+				<li><a href="#blog1">BLOG</a></li>
+				<li><a href="#contacttext">CONTACT</a></li>
+                <!--<li><a href="game.html">TESTGAME</a></li>-->
+                <li><a href="game2.html">GAME</a></li>
+            </ul>	
+        </nav>
 		
-			<header class="title">
-				<img id="home" class="resize" src="tree.jpg" >		
-			</header>
-			
-			<section>
-                      
-				<img id="info" class="resize" src="lights1.jpg">
+        <header class="title">
+            <img id="home" class="resize" src="tree.jpg" >		
+        </header>
+        
+        <img id="info" class="resize" src="lights1.jpg">
+        
+        <section class="ongelmat">
+            <article class="o">
+                <p>NYKYINEN ENERGIATUOTANTOMME EDISTÄÄ VAARALLISESTI ILMASTONMUUTOSTA</p>
+            </article>
+
+            <article class="o">
+                <p >KOTIMAINEN ENERGIATUOTANTO EI RIITÄ KATTAMAAN MAAMME ENERGIATARPEITA TALVISIN</p>
+            </article>
+
+            <article class="o">
+                <p>UUSIUTUVISTA ENERGIAMUODOISTA KOITUVA JÄTTILASKU</p>
+            </article>  
+        </section>
+        
+        <section class="ratkaisut">
+            <article class="r">
+                <p>MURRAMME YDINVOIMAA YMPÄRÖIVIÄ HARHALUULOJA</p>
+            </article>
+
+            <article class="r">
+                <p>LISÄÄMME KOTIMAISTA YDINVOIMAA</p>
+            </article>
+
+            <article class="r">
+                <p>JOKU HYVÄ SETTI VIEL TÄHÄ JOU</p>
+            </article>  
+        </section>
+        
+        <section class="faktat">
+            <article class="f">
+                <p>YDINVOIMA ON TÄYSIN KASVIHUONEPÄÄSTÖTÖNTÄ JA AINO TEHOAKAS TAPA PYSÄYTTÄÄ ILMASTONMUUTOS</p>
+            </article>
+
+            <article class="f">
+                <p>KOTIMAINEN, YKSITYISESTI RAHOITETTU YDINVOIMA ON VERONMAKSAJALLE ILMAISTA</p>
+            </article>
+
+            <article class="f">
+                <p>YDINVOIMALA AIHEUTTAA VÄHITEN KUOLEMIA KAIKISTA ENERGIAMUODOISTA</p>
+            </article>  
+        </section>
+                    
+        <video id="v" class="resize" width="640" height="360" controls poster="prtsc.png">
+                    
+            <source src="vjp_video.mp4" type="video/mp4">
+	        <source src="vjp_video.webm" type="video/webm">
+            <source src="vjp_video.ogv" type="video/ogg">
+            <source src="vjp_video.mpg" type="video/mpg">
+                    
+            <object type="application/x-shockwave-flash" data="http://releases.flowplayer.org/swf/flowplayer-3.2.1.swf" width="640" height="360">
+                <param name="movie" value="http://releases.flowplayer.org/swf/flowplayer-3.2.1.swf" />
+                <param name="allowFullScreen" value="true" />
+                <param name="wmode" value="transparent" />
+                <param name="flashVars" value="config={'playlist':['prtsc.png',{'url':'vjp_video.mp4','autoPlay':false}]}" />
+                <img alt="YDINVOIMAVIDEO" src="prtsc.png" width="640" height="360" title="No video playback capabilities, please download the video below" />
+	        </object>
+                    
+        </video>
                 
-                <video id="v" class="resize" width="640" height="360" controls poster="prtsc.png">
-                    
-                    <source src="vjp_video.mp4" type="video/mp4">
-	                <source src="vjp_video.webm" type="video/webm">
-                    <source src="vjp_video.ogv" type="video/ogg">
-                    <source src="vjp_video.mpg" type="video/mpg">
-                    
-                    <object type="application/x-shockwave-flash" data="http://releases.flowplayer.org/swf/flowplayer-3.2.1.swf" width="640" height="360">
-		              <param name="movie" value="http://releases.flowplayer.org/swf/flowplayer-3.2.1.swf" />
-		              <param name="allowFullScreen" value="true" />
-		              <param name="wmode" value="transparent" />
-		              <param name="flashVars" value="config={'playlist':['prtsc.png',{'url':'vjp_video.mp4','autoPlay':false}]}" />
-		              <img alt="YDINVOIMAVIDEO" src="prtsc.png" width="640" height="360" title="No video playback capabilities, please download the video below" />
-	               </object>
-                    
-                </video>
-                
-				<article id="uutisikkuna" class="blogpost" >
+				<!--<article id="uutisikkuna" class="blogpost" >
                     <div id="otsikko"></div>
                     <div id="pvm"></div>
                     <div id="sisältö"></div>       
@@ -68,20 +107,18 @@
 					    <button id="prev">←</button>	
                         <button id="pauseplay">Pause</button>	
                         <button id="next">→</button>	
-                </div>
+                </div> -->
                 
-				<article id="contact" class="blogpost">
-					<h3>Ota yhteytta!</h3>
-					<p id="contacttext">kokmusnuoret@gmail.com <br> +358503509617 </p>
-					<img id="logo" src="logo.jpg">
-				</article>
+        <article id="contact" class="blogpost">
+            <h3>Ota yhteytta!</h3>
+            <p id="contacttext">kokmusnuoret@gmail.com <br> +358503509617 </p>
+            <img id="logo" src="logo.jpg">
+        </article>
                 
-			</section>
-
-		    <footer id="footer" class="footer">
-                <p id="footertext">Liisi Korvenranta Copyright 2017 Kokmusnuoret</p>
-            </footer>
+        <footer id="footer" class="footer">
+            <p id="footertext">Liisi Korvenranta Copyright 2017 Kokmusnuoret</p>
+        </footer>
             
-		</body>
+    </body>
 	
 </html>
