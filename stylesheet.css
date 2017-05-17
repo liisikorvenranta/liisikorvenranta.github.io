@@ -61,7 +61,7 @@ body {
 	right:0px;
 }
 
-.blogpost {
+/*.blogpost {
 
 	width:70%;
 	margin: 0 auto;
@@ -71,6 +71,10 @@ body {
 	font-family: 'Raleway', sans-serif;
 	font-size: 16px; 
 	color: #848484	
+}*/
+
+#blogi {
+    align-content: center;
 }
 
 .blogpost h2 {
@@ -88,10 +92,16 @@ body {
 	padding-left: 40px;	
 }
 
-#blogtext {
-
-	text-align: center;
+#blogiteksti {
+    
+    font-family: 'Raleway', sans-serif;
+	font-size: 16px; 
+	color: #848484;
+	text-align: justify;
+    align-items: center;
 	width: 100%;
+    max-width: 1000px;
+    margin-left: 150px;
 }
 
 #contact {
@@ -222,7 +232,7 @@ body {
 	font-family: 'Raleway', sans-serif;
 	font-size: 22px;
     text-align: center;
-    margin-left: 100px;
+    margin-left: 110px;
     margin-right: 100px;
     
 }
@@ -230,7 +240,7 @@ body {
 .ratkaisut {
     display: flex;
     flex-wrap: wrap;  
-    background-color: white;
+    background-color: #f4f4f4;
 }
 
 .r {
@@ -243,7 +253,7 @@ body {
 	font-family: 'Raleway', sans-serif;
 	font-size: 22px;
     text-align: center;
-    margin-left: 100px;
+    margin-left: 110px;
     margin-right: 100px;
     
 }
@@ -264,7 +274,7 @@ body {
 	font-family: 'Raleway', sans-serif;
 	font-size: 22px;
     text-align: center;
-    margin-left: 100px;
+    margin-left: 110px;
     margin-right: 100px;
     
 }
@@ -274,3 +284,76 @@ body {
 }
 
 
+.titles {
+    text-decoration: none;
+	color: #848484;
+	font-family: 'Raleway', sans-serif;
+	font-size: 22px;
+    text-align: center;
+    text-decoration-line: underline;
+    background-color: #f4f4f4;
+    margin: 0px;
+    padding-top: 10px;
+}
+
+.some {
+    display: flex;
+    flex-wrap: wrap;  
+    background-color: #f4f4f4;
+    
+}
+
+.s {
+    max-width: 210px;
+    /*display: block;*/
+    justify-content: center;
+    align-items: center;
+    margin-left: 225px;
+    margin-right: 100px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    
+}
+
+#ig {
+    height: 50px;
+    width: 50px;
+}
+
+#fb {
+    height: 50px;
+    width: 50px;
+}
+
+#twitter {
+    height: 50px;
+    width: 50px;
+}
+
+#nyky {
+    margin-top: 20px;
+}
+
+#uusi {
+    margin-top: 30px;
+}
+
+#lisää {
+    margin-top: 20px;
+}
+
+#kakka {
+    margin-top: 20px;
+}
+
+#blogtitle {  
+    text-decoration: none;
+	color: #848484;
+	font-family: 'Raleway', sans-serif;
+	font-size: 22px;
+    text-align: center;
+    text-decoration-line: underline;
+    background-color: white;
+    margin: 0px;
+    padding-top: 10px;
+}
