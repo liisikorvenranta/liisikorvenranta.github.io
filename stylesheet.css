@@ -361,3 +361,16 @@ body {
     padding-top: 10px;
     
 }
+
+#date {
+    
+    text-decoration: none;
+	color: #848484;
+	font-family: 'Raleway', sans-serif;
+	font-size: 15px;
+    text-align: center;
+    background-color: white;
+    margin: 0px;
+    padding-top: 10px;
+    
+}
